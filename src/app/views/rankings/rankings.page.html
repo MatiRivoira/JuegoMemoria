@@ -1,0 +1,45 @@
+<ion-content [fullscreen]="true">
+  <div *ngIf="isLoading" class="spinner-container">
+    <svg class="spinner" viewBox="0 0 50 50">
+      <circle class="path" cx="25" cy="25" r="20" fill="none" stroke="url(#spinnerGradient)" stroke-width="5"></circle>
+      <defs>
+        <linearGradient id="spinnerGradient" x1="0%" y1="0%" x2="100%" y2="0%">
+          <stop offset="0%" style="stop-color:#00defc; stop-opacity:1" />
+          <stop offset="100%" style="stop-color:#ffbf66; stop-opacity:1" />
+        </linearGradient>
+      </defs>
+    </svg>
+  </div>
+  @if (!topScores) {
+    <div class="divSalir">
+      <button class="btn-salir" routerLink="/home">SALIR</button>
+    </div>
+  } @else {
+    <div class="divSalir">
+      <button class="btn-salir" (click)="(this.topScores = null)">ATRÁS</button>
+    </div>
+  }
+  
+  <div *ngIf="!topScores" class="container-dificultad">
+    <button class="btn-play" (click)="seleccionarDificultad('fácil')"><i class='bx bxs-dog'></i>FÁCIL</button>
+    <button class="btn-records" (click)="seleccionarDificultad('medio')"><i class='bx bxs-wrench'></i>MEDIO</button>
+    <button class="btn-salir" (click)="seleccionarDificultad('difícil')"><i class='bx bxs-lemon'></i>DIFÍCIL</button>
+  </div>
+  
+  <div *ngIf="topScores" class="container">
+    <div [ngClass]="{
+      'top-scores-facil': dificultadSeleccionada === 'fácil',
+      'top-scores-medio': dificultadSeleccionada === 'medio',
+      'top-scores-dificil': dificultadSeleccionada === 'difícil'
+    }" class="top-scores-container">
+      <h2>{{(dificultadSeleccionada.charAt(0).toUpperCase() + dificultadSeleccionada.slice(1))}} <br> Mejores tiempos</h2>
+      <ul class="top-scores-list">
+        <li *ngFor="let score of topScores" class="score-item">
+          <span class="score-id">Jugador: {{ (score.email || "unknown@").split("@")[0] }}</span>
+          <span class="score-time">Tiempo: {{ score.seconds }}s</span>
+          <span class="score-date">Fecha: {{ score.timestamp | date:'medium' }}</span>
+        </li>
+      </ul>
+    </div>
+  </div>
+</ion-content>

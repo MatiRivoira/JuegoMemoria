@@ -1,0 +1,36 @@
+<ion-content [fullscreen]="true">
+  <div class="divSalir">
+    <button class="btn-salir" (click)="salir()" routerLink="/home">Salir</button>
+  </div>
+
+  <div *ngIf="!dificultadElegida" class="container-dificultad">
+    <button class="btn-play" (click)="seleccionarDificultad('facil')"><i class='bx bxs-dog'></i>FÁCIL</button>
+    <button class="btn-records" (click)="seleccionarDificultad('medio')"><i class='bx bxs-wrench'></i>MEDIO</button>
+    <button class="btn-salir" (click)="seleccionarDificultad('dificil')"><i class='bx bxs-lemon'></i>DIFÍCIL</button>
+  </div>
+  <div *ngIf="dificultadElegida" class="grid-container" [ngStyle]="{
+    'grid-template-columns': dificultadElegida === 'facil' ? 'repeat(3, 1fr)' :
+                              (dificultadElegida === 'medio' ? 'repeat(5, 1fr)' : 'repeat(4, 1fr)'),
+    'grid-template-rows': dificultadElegida === 'facil' ? 'repeat(2, 1fr)' :
+                          (dificultadElegida === 'medio' ? 'repeat(2, 1fr)' : 'repeat(4, 1fr)')
+  }">
+    <div class="card" *ngFor="let card of cards" (click)="toggleCard(card)">
+      <img [src]="card.src" *ngIf="card.flipped">
+    </div>
+  </div>
+
+  <div class="modal" *ngIf="gameWon">
+    <div class="modal-content">
+        <h2>Fin del Juego</h2>
+        <p>{{ gameWon ? '¡Felicidades! Has ganado.' : 'Lo siento, has perdido.' }}</p>
+        <div class="stats-container">
+            <div class="stat-box">
+                <h3>Tiempo de juego</h3>
+                <p>{{ gameTimeInSeconds }} segundos</p>
+            </div>
+        </div>
+        <button class="btn-salir" (click)="salir()" routerLink="/home">Salir</button>
+        <button class="btn-play" (click)="seleccionarDificultad(this.dificultadElegida)">Jugar de nuevo</button>
+    </div>
+  </div>
+</ion-content>

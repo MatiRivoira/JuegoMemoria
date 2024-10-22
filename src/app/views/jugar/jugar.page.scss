@@ -1,0 +1,265 @@
+ion-content {
+    --background: linear-gradient(to right, #00defc, #ffbf66);
+    display: flex;
+    justify-content: center; /* Centra horizontalmente */
+    align-items: center; /* Centra verticalmente */
+    height: 100vh; /* Utiliza 100vh para asegurar que ocupa toda la ventana */
+    width: 100vw; /* Asegura el ancho completo */
+    overflow: hidden; /* Oculta el desbordamiento, si es necesario */
+    font-family: 'Ubuntu', sans-serif !important;
+}
+
+
+.container-dificultad {
+    width: 100%; /* O el ancho que necesites */
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.btn-play {
+    width: 80%;
+    position: relative;
+    color: rgba(255, 255, 255, 1);
+    text-decoration: none;
+    background-image: linear-gradient(to bottom, #8BC34A, #8df715); /* De celeste claro a un azul más oscuro */
+    font-weight: 700;
+    font-size: 2em;
+    display: flex;
+    align-items: center; /* Alinea verticalmente el contenido dentro del botón */
+    justify-content: center; /* Centra el contenido horizontalmente dentro del botón */
+    gap: 10px; /* Espacio entre el icono y el texto */
+    padding: 20px;
+    -webkit-border-radius: 8px;
+    -moz-border-radius: 8px;
+    border-radius: 8px;
+    -webkit-box-shadow: 0px 9px 0px  #79c027, 0px 9px 25px rgba(0, 0, 0, .3);
+    -moz-box-shadow: 0px 9px 0px #79c027, 0px 9px 25px rgba(0, 0, 0, .3);
+    box-shadow: 0px 9px 0px #79c027, 0px 9px 25px rgba(0, 0, 0, .3);
+    margin: 20px auto;
+    text-align: center;
+    
+    -webkit-transition: all .1s ease;
+    -moz-transition: all .1s ease;
+    -ms-transition: all .1s ease;
+    -o-transition: all .1s ease;
+    transition: all .1s ease;
+
+    i {
+        position: absolute;
+        display: flex;
+        left: 30px;
+    }
+}
+
+.btn-play:active {
+    -webkit-box-shadow: 0px 3px 0px #79c027, 0px 3px 6px rgba(0, 0, 0, .2);
+    -moz-box-shadow: 0px 3px 0px #79c027, 0px 3px 6px rgba(0, 0, 0, .2);
+    box-shadow: 0px 3px 0px #79c027, 0px 3px 6px rgba(0, 0, 0, .2);
+    position: relative;
+    top: 6px;
+}
+
+.btn-records {
+    width: 80%;
+    position: relative;
+    color: rgba(255, 255, 255, 1);
+    text-decoration: none;
+    background-image: linear-gradient(to bottom, #ffee51, #ffe714); /* De celeste claro a un azul más oscuro */
+    font-weight: 700;
+    font-size: 2em;
+    display: flex;
+    align-items: center; /* Alinea verticalmente el contenido dentro del botón */
+    justify-content: center; /* Centra el contenido horizontalmente dentro del botón */
+    gap: 10px; /* Espacio entre el icono y el texto */
+    padding: 20px;
+    -webkit-border-radius: 8px;
+    -moz-border-radius: 8px;
+    border-radius: 8px;
+    -webkit-box-shadow: 0px 9px 0px  #bbab1c, 0px 9px 25px rgba(0, 0, 0, .3);
+    -moz-box-shadow: 0px 9px 0px #bbab1c, 0px 9px 25px rgba(0, 0, 0, .3);
+    box-shadow: 0px 9px 0px #bbab1c, 0px 9px 25px rgba(0, 0, 0, .3);
+    margin: 20px auto;
+    text-align: center;
+    
+    -webkit-transition: all .1s ease;
+    -moz-transition: all .1s ease;
+    -ms-transition: all .1s ease;
+    -o-transition: all .1s ease;
+    transition: all .1s ease;
+
+    i {
+        position: absolute;
+        display: flex;
+        left: 30px;
+    }
+}
+
+.btn-records:active {
+    -webkit-box-shadow: 0px 3px 0px #bbab1c, 0px 3px 6px rgba(0, 0, 0, .2);
+    -moz-box-shadow: 0px 3px 0px #bbab1c, 0px 3px 6px rgba(0, 0, 0, .2);
+    box-shadow: 0px 3px 0px #bbab1c, 0px 3px 6px rgba(0, 0, 0, .2);
+    position: relative;
+    top: 6px;
+}
+
+.btn-salir {
+    position: relative;
+    color: rgba(255, 255, 255, 1);
+    text-decoration: none;
+    background-image: linear-gradient(to bottom, #F44336, #ff1100); /* De celeste claro a un azul más oscuro */
+    font-weight: 700;
+    font-size: 2em;
+    display: flex;
+    align-items: center; /* Alinea verticalmente el contenido dentro del botón */
+    justify-content: center; /* Centra el contenido horizontalmente dentro del botón */
+    gap: 10px; /* Espacio entre el icono y el texto */
+    padding: 20px;
+    -webkit-border-radius: 8px;
+    -moz-border-radius: 8px;
+    border-radius: 8px;
+    -webkit-box-shadow: 0px 9px 0px  #b63229, 0px 9px 25px rgba(0, 0, 0, .3);
+    -moz-box-shadow: 0px 9px 0px #b63229, 0px 9px 25px rgba(0, 0, 0, .3);
+    box-shadow: 0px 9px 0px #b63229, 0px 9px 25px rgba(0, 0, 0, .3);
+    margin: 20px auto;
+    text-align: center;
+    width: 80%;
+    
+    -webkit-transition: all .1s ease;
+    -moz-transition: all .1s ease;
+    -ms-transition: all .1s ease;
+    -o-transition: all .1s ease;
+    transition: all .1s ease;
+
+    i {
+        position: absolute;
+        display: flex;
+        left: 30px;
+    }
+}
+
+.btn-salir:active {
+    -webkit-box-shadow: 0px 3px 0px #b63229, 0px 3px 6px rgba(0, 0, 0, .2);
+    -moz-box-shadow: 0px 3px 0px #b63229, 0px 3px 6px rgba(0, 0, 0, .2);
+    box-shadow: 0px 3px 0px #b63229, 0px 3px 6px rgba(0, 0, 0, .2);
+    position: relative;
+    top: 6px;
+}
+
+//! GRID
+/* src/styles.css */
+.grid-container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr); /* 3 columnas */
+    grid-template-rows: repeat(2, 1fr); /* 2 filas para 6 tarjetas en total */
+    gap: 10px;
+    height: 100vh;
+    padding: 70px 40px;
+    box-sizing: border-box;
+}
+
+.card {
+    background-image: linear-gradient(to bottom, #00defc, #ffbf66); /* Fondo gris para tarjetas sin imagen visible */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden; /* Asegura que nada se desborde de la tarjeta */
+    position: relative; /* Posicionamiento relativo para los contenidos internos */
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, .7);
+    padding: 5px;
+}
+
+.card img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* Asegura que la imagen cubra todo el espacio disponible */
+    display: block; /* Necesario para que la imagen ocupe espacio */
+    background-color: rgba(255, 255, 255, 0.61);
+}
+
+.card.flipped img {
+    display: block; /* Muestra la imagen si la tarjeta está volteada */
+}
+
+@keyframes flip {
+    from {
+        transform: rotateY(0);
+    }
+    to {
+        transform: rotateY(180deg);
+    }
+}
+
+//*MODAL
+.modal {
+    position: fixed;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.6);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+}
+
+.modal-content {
+    background-image: linear-gradient(to bottom, #00defc, #ffbf66);
+    padding: 20px;
+    border-radius: 30px;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+    width: 90%;
+    max-width: 500px;
+    text-align: center;
+    color: white;
+
+    button {
+        width: 100%;
+        padding: 10px 20px;
+        margin-top: 15px;
+        background-color: #ffffff;
+        border: none;
+        border-radius: 30px;
+        cursor: pointer;
+    }
+}
+
+.stats-container {
+    display: flex;
+    justify-content: space-around;
+    margin-top: 20px;
+}
+
+.stat-box {
+    flex: 1; /* Hace que cada caja tome un espacio igual dentro del contenedor */
+    padding: 10px;
+    margin: 0 10px; /* Espacio entre las cajas */
+    background-color: #f4decb75; /* Color de fondo claro, ajusta según tu tema */
+    border: 1px solid #ffffff57; /* Borde sutil */
+    border-radius: 30px;
+    text-align: center; /* Alinea el texto al centro */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Sombra suave para profundidad */
+}
+
+.stat-box h3 {
+    font-size: medium;
+    margin-bottom: 5px; /* Espacio entre el título y el valor */
+    color: white; /* Color de texto oscuro para contraste */
+}
+
+.divSalir {
+    position: absolute;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+    z-index: 10;
+    margin-top: -10px;
+
+    button {
+        height: 20px;
+        font-size: large;
+    }
+}

@@ -1,0 +1,70 @@
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap" rel="stylesheet">
+
+<ion-content [ngStyle]="{'display': 'flex', 'justify-content': 'center', 'align-items': 'center', 'height': '100vh'}">
+  <div *ngIf="isLoading" class="spinner-container">
+    <svg class="spinner" viewBox="0 0 50 50">
+      <circle class="path" cx="25" cy="25" r="20" fill="none" stroke="url(#spinnerGradient)" stroke-width="5"></circle>
+      <defs>
+        <linearGradient id="spinnerGradient" x1="0%" y1="0%" x2="100%" y2="0%">
+          <stop offset="0%" style="stop-color:#00defc; stop-opacity:1" />
+          <stop offset="100%" style="stop-color:#ffbf66; stop-opacity:1" />
+        </linearGradient>
+      </defs>
+    </svg>
+  </div>
+  <div class="wrapper center-absolutely">
+    <div class="login-container">
+      <img class="img-principal" src="../../../../assets/img/face-app.png" alt="" width="100px">
+      <h1>Iniciar sesión</h1>
+      <div *ngIf="errMsg" class="err-msg-top"> {{errMsg}} </div>
+      <div class="input-box">
+        <input type="text" placeholder="Correo Electrónico" [(ngModel)]="email" [ngClass]="{'input-error': errorStates.email}">
+        <i class='bx bx-envelope' [ngClass]="{'icon-error': errorStates.email}"></i>      
+      </div>
+      <div *ngIf="errMsgemail" class="err-msg" style="margin-bottom: -10px;">{{errMsgemail}}</div>
+      <div class="input-box">
+        <input [type]="showPassword ? 'text' : 'password'" placeholder="Contraseña" [(ngModel)]="password" [ngClass]="{'input-error': errorStates.password}">
+        <i [class]='showPassword ? "bx bx-lock-open" : "bx bx-lock-alt"' (click)="togglePasswordVisibility()" [ngClass]="{'icon-error': errorStates.password}" style="cursor: pointer;"></i>
+      </div>
+      <div *ngIf="errMsgPassword" class="err-msg"> {{errMsgPassword}} </div>
+      <div class="clear-btn" (click)="limpiar()">Limpiar</div>
+      <button type="submit" class="btn" (click)="login()">Iniciar sesión</button>
+      <p>No tienes cuenta? <span (click)="registrar()">Regístrate</span></p>
+    </div>
+    <div style="width: 100%;  display: flex;        /* Activa Flexbox para el contenedor de botones */
+    justify-content: center; /* Centra los botones horizontalmente */
+    align-items: center;     /* Alinea los botones verticalmente en el centro */
+    position: absolute; bottom: 70px; left: 0;">
+      <div *ngIf="showUsers" class="box-users slide-in">
+          <button class="btn-play" (click)="autoFillUser('user1')">
+            <i class='bx bxs-invader' ></i>              
+            <span>Jugador 1</span>
+          </button>
+          <button class="btn-records" (click)="autoFillUser('user2')">
+            <i class='bx bxs-invader' ></i>              
+            <span>Jugador 2</span>
+          </button>
+          <button class="btn-salir" (click)="autoFillUser('user3')">
+            <i class='bx bxs-invader' ></i>              
+            <span>Jugador 3</span>
+          </button>
+      </div>
+    </div>
+    <div style="width: 100%; align-items: center; text-align: center; display: flex; justify-content: center; position: absolute; bottom: 10px; left: 0;">
+      <span  (click)="toggleUsersVisibility()" class="btnMostrarUsers">
+        @if (showUsers) {
+          <i class='bx bx-down-arrow-alt' ></i>            
+          Acceso rápido
+          <i class='bx bx-down-arrow-alt' ></i>
+        } @else {
+          <i class='bx bx-up-arrow-alt' ></i>
+            Acceso rápido
+          <i class='bx bx-up-arrow-alt' ></i>
+        }
+      
+      </span>
+    </div>
+  </div>
+</ion-content>

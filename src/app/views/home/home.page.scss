@@ -1,0 +1,143 @@
+ion-content {
+  --background: linear-gradient(to right, #00defc, #ffbf66);
+  height: 100vh;
+  display: flex; 
+  justify-content: center; 
+  align-items: center;
+  font-family: 'Ubuntu', sans-serif !important;
+}
+
+img {
+  width: 100%;
+  margin-top: 100px;
+  padding: 20px;
+}
+
+.btn-play {
+  width: 80%;
+  position: relative;
+  color: rgba(255, 255, 255, 1);
+  text-decoration: none;
+  background-image: linear-gradient(to bottom, #57dcfb, #2ca6d7); /* De celeste claro a un azul más oscuro */
+  font-weight: 700;
+  font-size: 2em;
+  display: flex;
+  align-items: center; /* Alinea verticalmente el contenido dentro del botón */
+  justify-content: center; /* Centra el contenido horizontalmente dentro del botón */
+  gap: 10px; /* Espacio entre el icono y el texto */
+  padding: 20px;
+  -webkit-border-radius: 8px;
+  -moz-border-radius: 8px;
+  border-radius: 8px;
+  -webkit-box-shadow: 0px 9px 0px  #2498c5, 0px 9px 25px rgba(0, 0, 0, .3);
+  -moz-box-shadow: 0px 9px 0px #2498c5, 0px 9px 25px rgba(0, 0, 0, .3);
+  box-shadow: 0px 9px 0px #2498c5, 0px 9px 25px rgba(0, 0, 0, .3);
+  margin: 20px auto;
+  text-align: center;
+  
+  -webkit-transition: all .1s ease;
+  -moz-transition: all .1s ease;
+  -ms-transition: all .1s ease;
+  -o-transition: all .1s ease;
+  transition: all .1s ease;
+
+  i {
+    position: absolute;
+    display: flex;
+    left: 30px;
+  }
+}
+
+.btn-play:active {
+  -webkit-box-shadow: 0px 3px 0px #2498c5, 0px 3px 6px rgba(0, 0, 0, .2);
+  -moz-box-shadow: 0px 3px 0px #2498c5, 0px 3px 6px rgba(0, 0, 0, .2);
+  box-shadow: 0px 3px 0px #2498c5, 0px 3px 6px rgba(0, 0, 0, .2);
+  position: relative;
+  top: 6px;
+}
+
+.btn-records {
+  width: 80%;
+  position: relative;
+  color: rgba(255, 255, 255, 1);
+  text-decoration: none;
+  background-image: linear-gradient(to bottom, #bf57fb, #a12cd7); /* De celeste claro a un azul más oscuro */
+  font-weight: 700;
+  font-size: 2em;
+  display: flex;
+  align-items: center; /* Alinea verticalmente el contenido dentro del botón */
+  justify-content: center; /* Centra el contenido horizontalmente dentro del botón */
+  gap: 10px; /* Espacio entre el icono y el texto */
+  padding: 20px;
+  -webkit-border-radius: 8px;
+  -moz-border-radius: 8px;
+  border-radius: 8px;
+  -webkit-box-shadow: 0px 9px 0px  #7c22a5, 0px 9px 25px rgba(0, 0, 0, .3);
+  -moz-box-shadow: 0px 9px 0px #7c22a5, 0px 9px 25px rgba(0, 0, 0, .3);
+  box-shadow: 0px 9px 0px #7c22a5, 0px 9px 25px rgba(0, 0, 0, .3);
+  margin: 20px auto;
+  text-align: center;
+  
+  -webkit-transition: all .1s ease;
+  -moz-transition: all .1s ease;
+  -ms-transition: all .1s ease;
+  -o-transition: all .1s ease;
+  transition: all .1s ease;
+
+  i {
+    position: absolute;
+    display: flex;
+    left: 30px;
+  }
+}
+
+.btn-records:active {
+  -webkit-box-shadow: 0px 3px 0px #7c22a5, 0px 3px 6px rgba(0, 0, 0, .2);
+  -moz-box-shadow: 0px 3px 0px #7c22a5, 0px 3px 6px rgba(0, 0, 0, .2);
+  box-shadow: 0px 3px 0px #7c22a5, 0px 3px 6px rgba(0, 0, 0, .2);
+  position: relative;
+  top: 6px;
+}
+
+.btn-salir {
+  position: relative;
+  color: rgba(255, 255, 255, 1);
+  text-decoration: none;
+  background-image: linear-gradient(to bottom, #ff7d97, #ce6479); /* De celeste claro a un azul más oscuro */
+  font-weight: 700;
+  font-size: 2em;
+  display: flex;
+  align-items: center; /* Alinea verticalmente el contenido dentro del botón */
+  justify-content: center; /* Centra el contenido horizontalmente dentro del botón */
+  gap: 10px; /* Espacio entre el icono y el texto */
+  padding: 20px;
+  -webkit-border-radius: 8px;
+  -moz-border-radius: 8px;
+  border-radius: 8px;
+  -webkit-box-shadow: 0px 9px 0px  #a85061, 0px 9px 25px rgba(0, 0, 0, .3);
+  -moz-box-shadow: 0px 9px 0px #a85061, 0px 9px 25px rgba(0, 0, 0, .3);
+  box-shadow: 0px 9px 0px #a85061, 0px 9px 25px rgba(0, 0, 0, .3);
+  margin: 20px auto;
+  text-align: center;
+  width: 80%;
+  
+  -webkit-transition: all .1s ease;
+  -moz-transition: all .1s ease;
+  -ms-transition: all .1s ease;
+  -o-transition: all .1s ease;
+  transition: all .1s ease;
+
+  i {
+    position: absolute;
+    display: flex;
+    left: 30px;
+  }
+}
+
+.btn-salir:active {
+  -webkit-box-shadow: 0px 3px 0px #a85061, 0px 3px 6px rgba(0, 0, 0, .2);
+  -moz-box-shadow: 0px 3px 0px #a85061, 0px 3px 6px rgba(0, 0, 0, .2);
+  box-shadow: 0px 3px 0px #a85061, 0px 3px 6px rgba(0, 0, 0, .2);
+  position: relative;
+  top: 6px;
+}
